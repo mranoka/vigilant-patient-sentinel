@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const PORT = process.env.PORT || 3001;
 const mongoose = require('mongoose');
+const path = require('path');
 
 // helmet provides extra layer of security
 app.use(helmet());
