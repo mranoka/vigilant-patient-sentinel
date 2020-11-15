@@ -22,9 +22,9 @@ app.use(
 
 // allow Express to serve resources built from React app
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'views/build')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
     app.get('/*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'views', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
 
@@ -42,11 +42,12 @@ require('./routes/adminUpdate.route.js')(app);
 require('./routes/adminDelete.route.js')(app);
 
 // uri for connecting to database from Atlas
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.fojyg.mongodb.net/test?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.fojyg.mongodb.net/${process.env.DB_}?retryWrites=true&w=majority`
 mongoose.Promise = global.Promise;
 
 mongoose.connect(uri, {
-    useMongoClient: true
+    useUnifiedTopology: true,
+    useNewUrlParser: true
 });
 
 mongoose.connection.on('error', function () {
