@@ -34,9 +34,5 @@ The Patient Sentinel is user-admin access application that allows doctors to kee
 * Helmet has been used to secure the custom server
 * Environmental variables have been used to abstract sensitive information from the codebase
 
-### Deployment
-* The application has been deployed on heroku; with the backend and front-end together.
-* link: https://patient-sentinel.herokuapp.com/
-
 ### Authors
 Mahamo Ranoka
