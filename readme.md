@@ -1,4 +1,4 @@
-# The Patient Sentinel
+# The Patient Sentinel - First attempt at Full-stack Web application
 The Patient Sentinel is user-admin access application that allows doctors to keep track of and edit patient information in a database. Users/patients have read-only access and are thus only able to view their appointments
 
 ### installation
@@ -18,21 +18,3 @@ The Patient Sentinel is user-admin access application that allows doctors to kee
 * logging in as an ordinary user on allows for read-only access 
 * There are four environmental varaibles: DB_, DB_USER, DB_PASS and KEY_JWT. Simply create a .env file and set the DB_USER to your MongoDB username, DB_PASS to your MongoDB password and DB_ to the name of the database you want to connect to. You can set the value of KEY_JWT to anything
 
-### User Interface
-
-#### DESKTOP
-![HomePage desktop](images/home.png)
-![login Page desktop](images/login-desktop.png)
-![sign up Page desktop](images/signUp-desktop.png)
-![Admin Page desktop](images/admin-desktop.png)
-
-#### MOBILE
-![login Page mobile](images/login-mobile.png)
-![sign up Page mobile](images/sign-mobile.png)
-
-### Security
-* Helmet has been used to secure the custom server
-* Environmental variables have been used to abstract sensitive information from the codebase
-
-### Authors
-Mahamo Ranoka
